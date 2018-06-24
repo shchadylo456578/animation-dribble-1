@@ -42,6 +42,8 @@ $(function () {
       ease: Back.easeOut.config(-3)
     }, '-=1.3');
 
+
+
   // Background page animation
   var animationSlide = new TweenMax.to('#slide01', 0.5, {
     opacity: 0,
@@ -60,35 +62,40 @@ $(function () {
 
   // Scene 1 - pin the second section
   var pinScene01 = new ScrollMagic.Scene({
-      triggerElement: '#slide01',
+      triggerElement: '.pin-slide',
       triggerHook: 0,
-      duration: '100%'
+      duration: '100%',
+      offset: 0
     })
       .setTween(animationSlide)
       .setPin('#slide01')
-      // .addIndicators()
+      .addIndicators()
 
       .addTo(controller)
   ;
 
 
   var pinScene02 = new ScrollMagic.Scene({
-      triggerElement: '#slide02',
+      triggerElement: '.pin-slide',
       triggerHook: 0,
+      offset: 0,
+
       duration: '200%'
     })
       .setTween(animationSlideTwo)
       .setPin('#slide02')
-      // .addIndicators()
+      .addIndicators()
       .addTo(controller)
   ;
 
   var pinScene03 = new ScrollMagic.Scene({
-      triggerElement: '#slide02',
+      triggerElement: '.pin-slide',
       triggerHook: 0,
       duration: 0
+
     })
       .setPin('#slide03', {pushFollowers: false})
+      .addIndicators()
       .addTo(controller)
   ;
 
