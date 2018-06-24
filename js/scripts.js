@@ -69,7 +69,7 @@ $(function () {
     })
       .setTween(animationSlide)
       .setPin('#slide01')
-      .addIndicators()
+      // .addIndicators()
 
       .addTo(controller)
   ;
@@ -84,7 +84,7 @@ $(function () {
     })
       .setTween(animationSlideTwo)
       .setPin('#slide02')
-      .addIndicators()
+      // .addIndicators()
       .addTo(controller)
   ;
 
@@ -95,7 +95,7 @@ $(function () {
 
     })
       .setPin('#slide03', {pushFollowers: false})
-      .addIndicators()
+      // .addIndicators()
       .addTo(controller)
   ;
 
